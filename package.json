@@ -1,0 +1,61 @@
+{
+  "name": "@revolutionpopuli/revpopjs-ws",
+  "version": "0.3.0",
+  "description": "Pure JavaScript RevPop websocket interface for node.js and browsers.",
+  "browser": {
+    "ws": false
+  },
+  "scripts": {
+    "test": "BABEL_ENV=test mocha --require @babel/register --recursive",
+    "test:watch": "npm test -- --watch",
+    "test:connection": "BABEL_ENV=test mocha --require @babel/register ./test/Connection --watch",
+    "test:api": "BABEL_ENV=test mocha --require @babel/register ./test/Api --watch",
+    "test:manager": "BABEL_ENV=test mocha --require @babel/register ./test/Manager --watch",
+    "pretest:browser": "NODE_ENV=dev browserify test/*.js -o browser-test/browser-test.js -t [ babelify ]",
+    "test:browser": "BABEL_ENV=test http-server ./browser-test",
+    "clean": "rm -rf ./lib/* & rm -rf ./build/*",
+    "prebuild": "npm run clean",
+    "build": "babel src -d lib",
+    "postbuild": "npm run browserify",
+    "prepare": "npm run build",
+    "browserify": "cross-env NODE_ENV=production browserify lib/index.js --standalone revpop_ws -o build/revpopjs-ws.js -d",
+    "postbrowserify": "cross-env NODE_ENV=production minify build/revpopjs-ws.js --mangle --outFile build/revpopjs-ws.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Revolution-Populi/revpopjs-ws.git"
+  },
+  "author": "Revolution Populi Limited <robert.b.rosenthal@gmail.com>",
+  "contributors": [
+    "Robert Rosenthal <robert.b.rosenthal@gmail.com> (https://github.com/Revolution-Populi)",
+    "Sigve Kvalsvik <bitsharesblocks@gmail.com> (https://github.com/svk31)",
+    "James Calfee <james@jcalfee.info> (https://github.com/jcalfee/)",
+    "scientistnik"
+  ],
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Revolution-Populi/revpopjs-ws/issues"
+  },
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "isomorphic-ws": "^4.0.1",
+    "ws": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "assert": "^1.5.0",
+    "babel-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.1",
+    "browserify": "^16.5.2",
+    "cross-env": "^5.2.1",
+    "http-server": "^0.12.3",
+    "mocha": "^8.1.3"
+  }
+}

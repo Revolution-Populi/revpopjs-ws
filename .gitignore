@@ -1,0 +1,11 @@
+.npmrc
+.idea
+.vscode
+npm-debug.log
+node_modules
+build
+cjs
+es
+lib
+*.swp
+browser-test/browser-test.js
