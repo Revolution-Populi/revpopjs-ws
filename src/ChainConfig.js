@@ -6,10 +6,10 @@ var config = {
   review_in_secs_committee: 24 * 60 * 60,
   networks: {
     RevPop: {
-      core_asset: "REV",
-      address_prefix: "REV",
+      core_asset: "RVP",
+      address_prefix: "RVP",
       chain_id:
-        "0eaffbc81383f34639f8615a1822b2a7bdcfb172c880a1829dd146d03c997df2"
+        "3da3a128785cac2be918e634720795a1ca337a71533cb9f56e7a7391c5aa0614"
     }
   },
 

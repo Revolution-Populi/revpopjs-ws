@@ -268,8 +268,8 @@ describe("Api", () => {
 
         it ("Get market data", function() {
             return new Promise( function(resolve, reject) {
-                if (coreAsset !== "REV") {
-                    reject(new Error("This test will only work when connected to a REV api"));
+                if (coreAsset !== "RVP") {
+                    reject(new Error("This test will only work when connected to a RVP api"));
                 }
                 Apis.instance().history_api().exec("get_fill_order_history", ["1.3.121", "1.3.0", 10])
                 .then(function(history) {
@@ -284,8 +284,8 @@ describe("Api", () => {
 
         it ("Get market data (short)", function() {
             return new Promise( function(resolve, reject) {
-                if (coreAsset !== "REV") {
-                    reject(new Error("This test will only work when connected to a REV api"));
+                if (coreAsset !== "RVP") {
+                    reject(new Error("This test will only work when connected to a RVP api"));
                 }
                 Apis.history.get_fill_order_history("1.3.121", "1.3.0", 10)
                 .then(function(history) {
