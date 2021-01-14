@@ -1,6 +1,6 @@
 {
   "name": "@revolutionpopuli/revpopjs-ws",
-  "version": "0.4.0",
+  "version": "0.4.4",
   "description": "Pure JavaScript RevPop websocket interface for node.js and browsers.",
   "browser": {
     "ws": false

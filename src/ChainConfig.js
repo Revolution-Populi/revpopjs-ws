@@ -9,7 +9,7 @@ var config = {
       core_asset: "RVP",
       address_prefix: "RVP",
       chain_id:
-        "3da3a128785cac2be918e634720795a1ca337a71533cb9f56e7a7391c5aa0614"
+        "3eb7485cde282aabdfaf41d54fa4fedb1fe2537c598c969b0f4dce412f8ad29d"
     }
   },
 
