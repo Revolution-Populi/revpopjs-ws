@@ -10,6 +10,12 @@ var config = {
       address_prefix: "RVP",
       chain_id:
         "3eb7485cde282aabdfaf41d54fa4fedb1fe2537c598c969b0f4dce412f8ad29d"
+    },
+    RevPopDev: {
+      core_asset: "RVP",
+      address_prefix: "RVP",
+      chain_id:
+        "147f0c14427dc6c28ecc977229e5067cf3608cb6d16f79aa39888845ee4ca2bf"
     }
   },
 
