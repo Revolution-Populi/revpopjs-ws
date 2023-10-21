@@ -9,3 +9,5 @@ es
 lib
 *.swp
 browser-test/browser-test.js
+lib/
+build/
